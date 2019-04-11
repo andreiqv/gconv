@@ -1,6 +1,8 @@
 
 import ast
 import sys
+sys.path.append('.')
+sys.path.append('..')
 sys.path.append('../../')
 import argparse
 import logging
