@@ -13,7 +13,7 @@ import subprocess
 import numpy as np
 from chainer import optimizers, cuda, serializers
 from progressbar import ProgressBar
-from gconv_experiments.augmentation import rotate_transform_batch
+from augmentation import rotate_transform_batch
 from chainer import Variable
 
 
