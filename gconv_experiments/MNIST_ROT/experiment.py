@@ -19,9 +19,9 @@ if __name__ == '__main__':
 
             errors[m + t] = []
             for i in range(args['repeats']):
-                print 'Model:', m
-                print 'Augmentation:', t
-                print 'Repeat:', i + 1
+                print('Model:', m)
+                print('Augmentation:', t)
+                print('Repeat:', i + 1)
 
                 modelfn = os.path.join(args['modelpath'], m)
                 err, _, _ = train(
@@ -43,13 +43,13 @@ if __name__ == '__main__':
 
                 errors[m + t].append(err)
 
-            print '-- Evaluation run complete --'
-            print 'Model:', m,
-            print 'augmentations:', t
-            print 'error rates:', errors[m + t]
-            print 'mean error rate:', np.mean(errors[m + t]), '+/-', np.std(errors[m + t])
+            print('-- Evaluation run complete --')
+            print('Model:', m)
+            print('augmentations:', t)
+            print('error rates:', errors[m + t])
+            print('mean error rate:', np.mean(errors[m + t]), '+/-', np.std(errors[m + t]))
 
-    print 'EXPERIMENT COMPLETED'
-    print errors
+    print('EXPERIMENT COMPLETED')
+    print(errors)
     for mt in errors:
-        print 'mean error rate for', mt, ':', np.mean(errors[mt]), '+/-', np.std(errors[mt])
+        print('mean error rate for', mt, ':', np.mean(errors[mt]), '+/-', np.std(errors[mt]))
